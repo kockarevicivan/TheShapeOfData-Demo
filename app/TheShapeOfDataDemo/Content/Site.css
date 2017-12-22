@@ -1,0 +1,77 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.our-cool-feature {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #d12626;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+}
+
+    .our-cool-feature:hover {
+        height: 220px;
+        width: 220px;
+    }
+
+    .our-cool-feature:active {
+        background-color: #067cfc;
+    }
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #4c7bff;
+    border: none;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 360px;
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #d0d0d0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    form > h3 {
+        margin: 0;
+        margin-bottom: 20px;
+    }

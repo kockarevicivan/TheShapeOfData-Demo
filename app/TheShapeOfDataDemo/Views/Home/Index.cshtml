@@ -1,0 +1,42 @@
+﻿@using TheShapeOfDataDemo.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+@Model.Username
+<div class="our-cool-feature"></div>
+
+<script>
+
+    function loggedIn() {
+        mixpanel.identify('@Model.Username');
+
+        mixpanel.people.set({
+            "Some info about our user": 'Test'
+        });
+
+        mixpanel.track("Logged in");
+    }
+
+    function hovered() {
+        mixpanel.track('Hovered feature');
+    }
+
+    function clicked() {
+        mixpanel.track('Clicked feature');
+    }
+
+    $(document).ready(function () {
+        loggedIn();
+
+        $('.our-cool-feature').on('mouseenter', function () {
+            hovered();
+        });
+
+        $('.our-cool-feature').on('click', function () {
+            clicked();
+        });
+    });
+</script>

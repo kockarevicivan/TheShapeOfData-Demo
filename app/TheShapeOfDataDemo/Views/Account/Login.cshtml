@@ -1,0 +1,17 @@
+﻿@using TheShapeOfDataDemo.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h3>Login</h3>
+    <label>Username:</label>
+    @Html.TextBoxFor(m => m.Username)
+    <label>Password:</label>
+    @Html.PasswordFor(m => m.Password)
+
+    <input type="submit" value="Login" />
+}
